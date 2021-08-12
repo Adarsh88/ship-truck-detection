@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block head%} {% endblock %} {% block body %}
+<div>
+  <h1>SHIP OR TRUCK PREDICTOR</h1>
+
+  <form action="/predict" method="POST">
+    <div>
+      <p>Upload the picture</p>
+      <input type="file" id="predFile" name="predFile" />
+    </div>
+    <input type="submit" value="Predict" />
+  </form>
+  <h2>Predicted: {{pred}}</h2>
+</div>
+{% endblock %}
